@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Bookings – EcoBreeze</title>
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+.bookings-page{min-height:100vh;background:#f8fffe;padding:80px 20px 40px;}
+.bookings-container{max-width:900px;margin:0 auto;}
+.bookings-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:30px;}
+.bookings-header h1{font-size:28px;font-weight:800;color:#0a1628;}
+.booking-tabs{display:flex;gap:4px;background:#eee;border-radius:12px;padding:4px;margin-bottom:24px;}
+.booking-tab{flex:1;padding:10px;border:none;background:transparent;border-radius:10px;font-size:14px;font-weight:600;cursor:pointer;font-family:inherit;transition:all 0.2s;color:#666;}
+.booking-tab.active{background:#fff;color:#0a1628;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+.booking-card{background:#fff;border-radius:16px;padding:24px;margin-bottom:16px;border:1.5px solid #eee;display:grid;grid-template-columns:auto 1fr auto;gap:20px;align-items:center;}
+.booking-icon{width:56px;height:56px;border-radius:14px;background:#e8f5e9;display:flex;align-items:center;justify-content:center;font-size:28px;}
+.booking-info h3{font-size:16px;font-weight:700;color:#0a1628;margin-bottom:4px;}
+.booking-info p{font-size:14px;color:#666;margin-bottom:6px;}
+.booking-meta{display:flex;gap:12px;flex-wrap:wrap;}
+.booking-meta span{font-size:12px;color:#888;display:flex;align-items:center;gap:4px;}
+.booking-status{display:inline-block;padding:4px 12px;border-radius:12px;font-size:12px;font-weight:700;}
+.status-upcoming{background:#e8f5e9;color:#2e7d32;}
+.status-completed{background:#e3f2fd;color:#1565c0;}
+.status-cancelled{background:#fce4ec;color:#c62828;}
+.booking-actions{display:flex;flex-direction:column;gap:8px;align-items:flex-end;}
+.btn-track{background:#0a1628;color:#fff;border:none;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap;}
+.btn-rebook{background:transparent;color:#2e7d32;border:1.5px solid #2e7d32;padding:8px 16px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:inherit;white-space:nowrap;}
+.empty-state{text-align:center;padding:60px 20px;}
+.empty-state .empty-icon{font-size:80px;margin-bottom:20px;}
+.empty-state h2{font-size:22px;font-weight:700;color:#0a1628;margin-bottom:8px;}
+.empty-state p{color:#888;margin-bottom:20px;}
+</style>
+</head>
+<body>
+<header class="header" id="header">
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      <div class="logo-text">
+        <span class="logo-name">EcoBreeze</span>
+        <span class="logo-tagline">HYGIENE HEROES</span>
+      </div>
+    </a>
+    <div style="flex:1"></div>
+    <div class="nav-actions">
+      <a href="index.html" class="btn-book" style="text-decoration:none"><i class="fas fa-plus"></i> New Booking</a>
+    </div>
+  </nav>
+</header>
+<div class="bookings-page">
+  <div class="bookings-container">
+    <div class="bookings-header">
+      <div>
+        <h1>My Bookings</h1>
+        <p style="color:#666;margin-top:4px">Manage and track your service bookings</p>
+      </div>
+    </div>
+    <div class="booking-tabs">
+      <button class="booking-tab active" onclick="filterBookings('all',this)">All Bookings</button>
+      <button class="booking-tab" onclick="filterBookings('upcoming',this)">Upcoming</button>
+      <button class="booking-tab" onclick="filterBookings('completed',this)">Completed</button>
+    </div>
+    <div id="bookingsList">
+      <div class="booking-card" data-status="upcoming">
+        <div class="booking-icon">🧹</div>
+        <div class="booking-info">
+          <h3>Villa Deep Cleaning</h3>
+          <p>📍 Dubai Marina Villa · 3 Bedrooms + Hall</p>
+          <div class="booking-meta">
+            <span><i class="fas fa-calendar"></i> May 5, 2026</span>
+            <span><i class="fas fa-clock"></i> 10:00 AM</span>
+            <span><i class="fas fa-user"></i> Maria Santos</span>
+          </div>
+        </div>
+        <div class="booking-actions">
+          <span class="booking-status status-upcoming">Upcoming</span>
+          <button class="btn-track" onclick="alert('Live tracking coming in the app!')">📍 Track</button>
+          <button class="btn-rebook">Reschedule</button>
+        </div>
+      </div>
+      <div class="booking-card" data-status="upcoming">
+        <div class="booking-icon">🐛</div>
+        <div class="booking-info">
+          <h3>General Pest Control</h3>
+          <p>📍 Sharjah, Al Nahda · Apartment</p>
+          <div class="booking-meta">
+            <span><i class="fas fa-calendar"></i> May 12, 2026</span>
+            <span><i class="fas fa-clock"></i> 2:00 PM</span>
+            <span><i class="fas fa-user"></i> Ahmed Hassan</span>
+          </div>
+        </div>
+        <div class="booking-actions">
+          <span class="booking-status status-upcoming">Upcoming</span>
+          <button class="btn-track" onclick="alert('Live tracking available on day of service!')">📍 Track</button>
+          <button class="btn-rebook">Reschedule</button>
+        </div>
+      </div>
+      <div class="booking-card" data-status="completed">
+        <div class="booking-icon">❄️</div>
+        <div class="booking-info">
+          <h3>AC Duct Cleaning</h3>
+          <p>📍 Abu Dhabi, Khalifa City · Villa</p>
+          <div class="booking-meta">
+            <span><i class="fas fa-calendar"></i> April 18, 2026</span>
+            <span><i class="fas fa-check-circle" style="color:#4caf50"></i> Completed</span>
+            <span><i class="fas fa-star" style="color:#ffc107"></i> Rated: ★★★★★</span>
+          </div>
+        </div>
+        <div class="booking-actions">
+          <span class="booking-status status-completed">Completed</span>
+          <button class="btn-rebook" onclick="window.location.href='index.html'">Re-book →</button>
+        </div>
+      </div>
+      <div class="booking-card" data-status="completed">
+        <div class="booking-icon">🛋️</div>
+        <div class="booking-info">
+          <h3>Sofa & Upholstery Cleaning</h3>
+          <p>📍 Dubai, JBR · L-shape Sofa + 2 Armchairs</p>
+          <div class="booking-meta">
+            <span><i class="fas fa-calendar"></i> March 30, 2026</span>
+            <span><i class="fas fa-check-circle" style="color:#4caf50"></i> Completed</span>
+            <span><i class="fas fa-star" style="color:#ffc107"></i> Rated: ★★★★☆</span>
+          </div>
+        </div>
+        <div class="booking-actions">
+          <span class="booking-status status-completed">Completed</span>
+          <button class="btn-rebook" onclick="window.location.href='index.html'">Re-book →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+function filterBookings(status, btn) {
+  document.querySelectorAll('.booking-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.booking-card').forEach(card => {
+    if (status === 'all' || card.dataset.status === status) {
+      card.style.display = 'grid';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
