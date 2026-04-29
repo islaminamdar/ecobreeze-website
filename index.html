@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EcoBreeze – UAE's #1 Eco-Friendly Pest Control & Deep Cleaning</title>
+<meta name="description" content="EcoBreeze offers professional eco-friendly pest control and deep cleaning services across Dubai, Abu Dhabi and all UAE emirates. Book online, same-day available.">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar">
+  <div class="announce-scroll">
+    <span>🌿 UAE's #1 Eco-Friendly Hygiene Service</span>
+    <span>✅ Same-Day Booking Available</span>
+    <span>📞 Call Now: +971 50 XXX XXXX</span>
+    <span>🏆 4.9★ Rated on Google — 5,000+ Happy Customers</span>
+    <span>🌿 UAE's #1 Eco-Friendly Hygiene Service</span>
+    <span>✅ Same-Day Booking Available</span>
+    <span>📞 Call Now: +971 50 XXX XXXX</span>
+    <span>🏆 4.9★ Rated on Google — 5,000+ Happy Customers</span>
+  </div>
+</div>
+
+<!-- HEADER / NAVBAR -->
+<header class="header" id="header">
+  <nav class="navbar">
+    <div class="nav-logo">
+      <div class="logo-icon">🌿</div>
+      <div class="logo-text">
+        <span class="logo-name">EcoBreeze</span>
+        <span class="logo-tagline">HYGIENE HEROES</span>
+      </div>
+    </div>
+
+    <!-- SEARCH BAR (Urban Company style) -->
+    <div class="nav-search">
+      <div class="search-location">
+        <i class="fas fa-map-marker-alt"></i>
+        <select id="locationSelect" class="location-select">
+          <option value="dubai">Dubai</option>
+          <option value="abudhabi">Abu Dhabi</option>
+          <option value="sharjah">Sharjah</option>
+          <option value="ajman">Ajman</option>
+          <option value="rak">Ras Al Khaimah</option>
+          <option value="fujairah">Fujairah</option>
+          <option value="uaq">Umm Al Quwain</option>
+        </select>
+      </div>
+      <div class="search-input-wrap">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchInput" placeholder="Search for AC cleaning, pest control..." autocomplete="off">
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+    </div>
+
+    <div class="nav-links">
+      <a href="#cleaning" class="nav-link">Deep Cleaning</a>
+      <a href="#pest" class="nav-link">Pest Control</a>
+      <a href="#packages" class="nav-link">Packages</a>
+      <a href="#areas" class="nav-link">Areas</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+    </div>
+
+    <div class="nav-actions">
+      <a href="tel:+97150XXXXXXX" class="btn-phone"><i class="fas fa-phone"></i> +971 50 XXX XXXX</a>
+      <a href="https://wa.me/97150XXXXXXX" class="btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <button class="btn-book" onclick="openBookingModal()"><i class="fas fa-calendar-alt"></i> Book Now</button>
+      <div class="nav-user" onclick="toggleUserMenu()">
+        <i class="fas fa-user-circle"></i>
+        <div class="user-menu" id="userMenu">
+          <a href="#" onclick="openLoginModal()"><i class="fas fa-sign-in-alt"></i> Login</a>
+          <a href="#" onclick="openLoginModal()"><i class="fas fa-user-plus"></i> Sign Up</a>
+          <a href="mybookings.html"><i class="fas fa-calendar-check"></i> My Bookings</a>
+        </div>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#cleaning">Deep Cleaning</a>
+    <a href="#pest">Pest Control</a>
+    <a href="#packages">Packages</a>
+    <a href="#areas">Areas</a>
+    <a href="#faq">FAQ</a>
+    <a href="tel:+97150XXXXXXX">📞 Call Us</a>
+    <a href="https://wa.me/97150XXXXXXX">💬 WhatsApp</a>
+    <a href="#" onclick="openBookingModal()">📅 Book Now</a>
+  </div>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="hero-left">
+      <div class="hero-badge">🌿 UAE's Most Trusted Hygiene Company</div>
+      <h1 class="hero-title">Your Space Deserves<br><span class="highlight">Professional Care</span></h1>
+      <p class="hero-desc">Eco-friendly pest control and deep cleaning services that protect your home, family &amp; the planet. Serving Dubai, Abu Dhabi &amp; all UAE emirates.</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">5K+</span><span class="stat-label">Happy Customers</span></div>
+        <div class="stat"><span class="stat-num">10K+</span><span class="stat-label">Services Done</span></div>
+        <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Google Rating</span></div>
+        <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Technicians</span></div>
+      </div>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="openBookingModal()">📅 Book a Service</button>
+        <button class="btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">🔍 Explore Services</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="booking-widget">
+        <h3>📅 Book Your Service</h3>
+        <p class="widget-sub">Get a free quote in 60 seconds</p>
+        <div class="service-grid" id="serviceGrid">
+          <div class="service-card active" onclick="selectService(this,'Pest Control','199')">
+            <span class="svc-icon">🐛</span>
+            <span class="svc-name">Pest Control</span>
+            <span class="svc-price">From AED 199</span>
+          </div>
+          <div class="service-card" onclick="selectService(this,'Villa Cleaning','299')">
+            <span class="svc-icon">🏠</span>
+            <span class="svc-name">Villa Cleaning</span>
+            <span class="svc-price">From AED 299</span>
+          </div>
+          <div class="service-card" onclick="selectService(this,'Office Clean','249')">
+            <span class="svc-icon">🏢</span>
+            <span class="svc-name">Office Clean</span>
+            <span class="svc-price">From AED 249</span>
+          </div>
+          <div class="service-card" onclick="selectService(this,'AC Duct','349')">
+            <span class="svc-icon">❄️</span>
+            <span class="svc-name">AC Duct</span>
+            <span class="svc-price">From AED 349</span>
+          </div>
+          <div class="service-card" onclick="selectService(this,'Sofa Clean','179')">
+            <span class="svc-icon">🛋️</span>
+            <span class="svc-name">Sofa Clean</span>
+            <span class="svc-price">From AED 179</span>
+          </div>
+          <div class="service-card" onclick="selectService(this,'Kitchen Deep','149')">
+            <span class="svc-icon">🍳</span>
+            <span class="svc-name">Kitchen Deep</span>
+            <span class="svc-price">From AED 149</span>
+          </div>
+        </div>
+        <form class="booking-form" onsubmit="submitBooking(event)">
+          <input type="text" placeholder="Your Full Name" required>
+          <input type="tel" placeholder="Phone Number (WhatsApp)" required>
+          <div class="form-row">
+            <select required>
+              <option value="">Select Emirate</option>
+              <option>Dubai</option><option>Abu Dhabi</option>
+              <option>Sharjah</option><option>Ajman</option><option>RAK</option>
+            </select>
+            <input type="date" required>
+          </div>
+          <button type="submit" class="btn-submit">✅ Get Free Quote Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BADGES -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-item"><i class="fas fa-shield-alt"></i><span>MOE Approved</span></div>
+    <div class="trust-item"><i class="fas fa-leaf"></i><span>Eco Certified</span></div>
+    <div class="trust-item"><i class="fas fa-certificate"></i><span>ISO 9001</span></div>
+    <div class="trust-item"><i class="fas fa-star"></i><span>4.9 Google Rating</span></div>
+    <div class="trust-item"><i class="fas fa-clock"></i><span>Same-Day Available</span></div>
+    <div class="trust-item"><i class="fas fa-undo"></i><span>Free Re-treatment</span></div>
+  </div>
+</section>
+
+<!-- SERVICES CATEGORY GRID (Urban Company Style) -->
+<section class="section" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">Our Services</span>
+      <h2>What are you looking for?</h2>
+      <p>Professional eco-friendly services for every space — homes, villas, offices and more</p>
+    </div>
+    <div class="category-grid">
+      <div class="category-card" onclick="document.getElementById('cleaning').scrollIntoView({behavior:'smooth'})">
+        <div class="cat-img cleaning-img"></div>
+        <h3>🧹 Deep Cleaning</h3>
+        <p>Full home, villa & office deep cleans</p>
+        <span class="cat-price">From AED 99</span>
+      </div>
+      <div class="category-card" onclick="document.getElementById('pest').scrollIntoView({behavior:'smooth'})">
+        <div class="cat-img pest-img"></div>
+        <h3>🐛 Pest Control</h3>
+        <p>Roaches, termites, bed bugs & more</p>
+        <span class="cat-price">From AED 199</span>
+      </div>
+      <div class="category-card" onclick="openBookingModal('AC Duct Cleaning')">
+        <div class="cat-img ac-img"></div>
+        <h3>❄️ AC Duct Cleaning</h3>
+        <p>Improve air quality & HVAC health</p>
+        <span class="cat-price">From AED 349</span>
+      </div>
+      <div class="category-card" onclick="openBookingModal('Sofa Cleaning')">
+        <div class="cat-img sofa-img"></div>
+        <h3>🛋️ Sofa & Upholstery</h3>
+        <p>Steam & dry clean for all fabrics</p>
+        <span class="cat-price">From AED 179</span>
+      </div>
+      <div class="category-card" onclick="openBookingModal('Move-In/Out Cleaning')">
+        <div class="cat-img movein-img"></div>
+        <h3>📦 Move In/Out Clean</h3>
+        <p>Full handover & tenancy cleaning</p>
+        <span class="cat-price">From AED 399</span>
+      </div>
+      <div class="category-card" onclick="openBookingModal('Fumigation')">
+        <div class="cat-img fumig-img"></div>
+        <h3>💨 Fumigation</h3>
+        <p>Gov-certified full property fumigation</p>
+        <span class="cat-price">From AED 349</span>
+      </div>
+      <div class="category-card" onclick="openBookingModal('Steam Cleaning')">
+        <div class="cat-img steam-img"></div>
+        <h3>♨️ Steam Cleaning</h3>
+        <p>Chemical-free 99.9% bacteria removal</p>
+        <span class="cat-price">From AED 199</span>
+      </div>
+      <div class="category-card" onclick="openBookingModal('Termite Control')">
+        <div class="cat-img termite-img"></div>
+        <h3>🪲 Termite Control</h3>
+        <p>Baiting, soil & wood injection</p>
+        <span class="cat-price">From AED 499</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- CLEANING SERVICES SECTION -->
+<section class="section section-light" id="cleaning">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">🧹 CLEANING SERVICES</span>
+      <h2>Deep Cleaning Services</h2>
+      <p>Professional, eco-friendly deep cleaning for every space — from cozy apartments to large commercial properties.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-item featured">
+        <div class="si-badge">⭐ Best Seller</div>
+        <div class="si-icon">🏡</div>
+        <h3>Villa Deep Cleaning</h3>
+        <p>Complete top-to-bottom deep cleaning for villas — all rooms, bathrooms, kitchen, terrace &amp; more</p>
+        <div class="si-includes">
+          <span>✅ All Rooms</span><span>✅ Kitchen Inside</span>
+          <span>✅ Bathrooms</span><span>✅ Terrace</span>
+        </div>
+        <div class="si-footer">
+          <span class="si-price">From AED 299</span>
+          <button class="btn-book-service" onclick="openBookingModal('Villa Deep Cleaning')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🏢</div>
+        <h3>Office &amp; Commercial</h3>
+        <p>Professional deep cleaning for offices, showrooms, warehouses and commercial spaces</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 249</span>
+          <button class="btn-book-service" onclick="openBookingModal('Office Cleaning')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🛁</div>
+        <h3>Bathroom Deep Clean</h3>
+        <p>Thorough sanitization of tiles, grout, fixtures and fittings using anti-bacterial products</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 99</span>
+          <button class="btn-book-service" onclick="openBookingModal('Bathroom Deep Clean')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🍳</div>
+        <h3>Kitchen Deep Cleaning</h3>
+        <p>Heavy-duty degreasing of oven, hood, cabinets, countertops and all appliances</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 149</span>
+          <button class="btn-book-service" onclick="openBookingModal('Kitchen Deep Cleaning')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item popular">
+        <div class="si-badge">🔥 Popular</div>
+        <div class="si-icon">❄️</div>
+        <h3>AC Duct Cleaning</h3>
+        <p>Improve indoor air quality with expert duct sanitization and HVAC system cleaning</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 349</span>
+          <button class="btn-book-service" onclick="openBookingModal('AC Duct Cleaning')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🛋️</div>
+        <h3>Sofa &amp; Upholstery</h3>
+        <p>Restore sofas, chairs and upholstery to their original freshness using gentle eco solutions</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 179</span>
+          <button class="btn-book-service" onclick="openBookingModal('Sofa Cleaning')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">📦</div>
+        <h3>Move-In / Move-Out</h3>
+        <p>Spotless handover cleaning to meet tenancy requirements and impress landlords or new tenants</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 399</span>
+          <button class="btn-book-service" onclick="openBookingModal('Move-In/Out Cleaning')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">♨️</div>
+        <h3>Steam Deep Cleaning</h3>
+        <p>Chemical-free eco steam cleaning kills 99.9% of bacteria for floors, tiles, mattresses and more</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 199</span>
+          <button class="btn-book-service" onclick="openBookingModal('Steam Cleaning')">Book Now →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PEST CONTROL SECTION -->
+<section class="section" id="pest">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">🐛 PEST CONTROL</span>
+      <h2>Pest Control Services</h2>
+      <p>Government-approved, eco-friendly pest treatments using safe, certified products. Protecting your family and pets.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="si-icon">🪲</div>
+        <h3>General Pest Control</h3>
+        <p>Cockroaches, ants, silverfish, flies &amp; all common household pests eliminated safely</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 199</span>
+          <button class="btn-book-service" onclick="openBookingModal('General Pest Control')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🐜</div>
+        <h3>Termite Control</h3>
+        <p>Advanced termite baiting, soil treatment and wood injection for complete protection</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 499</span>
+          <button class="btn-book-service" onclick="openBookingModal('Termite Control')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">💨</div>
+        <h3>Fumigation Services</h3>
+        <p>Full property fumigation using government-certified fumigants for complete pest elimination</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 349</span>
+          <button class="btn-book-service" onclick="openBookingModal('Fumigation')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🐞</div>
+        <h3>Bed Bug Treatment</h3>
+        <p>Heat treatment and chemical treatment to completely eliminate bed bug infestations</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 299</span>
+          <button class="btn-book-service" onclick="openBookingModal('Bed Bug Treatment')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🦟</div>
+        <h3>Mosquito &amp; Vector Control</h3>
+        <p>ULV fogging and larval treatment to eliminate mosquitoes and prevent dengue, malaria</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 249</span>
+          <button class="btn-book-service" onclick="openBookingModal('Mosquito Control')">Book Now →</button>
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="si-icon">🪳</div>
+        <h3>Cockroach Control</h3>
+        <p>Gel bait and spray treatment for complete cockroach elimination with 3-month guarantee</p>
+        <div class="si-footer">
+          <span class="si-price">From AED 149</span>
+          <button class="btn-book-service" onclick="openBookingModal('Cockroach Control')">Book Now →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US / USP SECTION -->
+<section class="section section-dark" id="why">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-badge">💚 WHY ECOBREEZE</span>
+      <h2>Why 5,000+ UAE Families Choose Us</h2>
+      <p>We combine cutting-edge techniques with eco-friendly products to deliver results you can see and breathe.</p>
+    </div>
+    <div class="usp-grid">
+      <div class="usp-card">
+        <div class="usp-icon">🏆</div>
+        <h3>Government Approved &amp; Certified</h3>
+        <p>All pest control treatments approved by UAE Ministry of Environment. Licensed technicians trained on latest techniques.</p>
+        <div class="usp-badges">
+          <span>✅ MOE Approved</span><span>🌿 Eco Certified</span>
+          <span>🔒 ISO 9001</span><span>⭐ 4.9 Rated</span>
+        </div>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">🌿</div>
+        <h3>100% Eco-Friendly Products</h3>
+        <p>We use only WHO-approved, non-toxic, biodegradable products that are safe for children, pets and the environment.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">⚡</div>
+        <h3>Same-Day &amp; Emergency Service</h3>
+        <p>Book today, get served today. Emergency pest control and same-day cleaning slots across all UAE emirates.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">🛡️</div>
+        <h3>100% Satisfaction Guarantee</h3>
+        <p>Not happy? We'll come back and re-treat at absolutely no extra charge. Your satisfaction is guaranteed.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">💰</div>
+        <h3>Transparent, Competitive Pricing</h3>
+        <p>No hidden fees. No surprises. Get your full quote upfront and pay only for what you need. Best value in UAE.</p>
+      </div>
+      <div class="usp-card">
+        <div class="usp-icon">📱</div>
+        <h3>Easy Booking — WhatsApp &amp; Online</h3>
+        <p>Book in under 2 minutes via WhatsApp, phone, or our website. Track your booking in real time.</p>
+      </div>
+    </div>
+    <div class="counter-row">
+      <div class="counter-item"><span class="counter-num" data-target="5000">0</span><span>+</span><p>Happy Customers</p></div>
+      <div class="counter-item"><span class="counter-num" data-target="150">0</span><span>+</span><p>Trained Technicians</p></div>
+      <div class="counter-item"><span class="counter-num" data-target="10000">0</span><span>+</span><p>Services Done</p></div>
+      <div class="counter-item"><span class="counter-num">4.9</span><span>★</span><p>Google Rating</p></div>
+    </div>
+  </div>
+</section>
+<!-- PACKAGES SECTION -->
+<section class="section" id="packages">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">💰 PACKAGES &amp; PLANS</span>
+      <h2>Value-Packed Service Plans</h2>
+      <p>Save more with our annual packages. Designed for homes, villas and businesses who need regular hygiene maintenance.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package-card">
+        <div class="pkg-header">
+          <h3>🏠 Home Essentials</h3>
+          <div class="pkg-price"><span>AED 599</span><small>/ package</small></div>
+          <p>Perfect for apartments and small homes needing a fresh start.</p>
+        </div>
+        <ul class="pkg-features">
+          <li><i class="fas fa-check"></i> 2x General Pest Control visits</li>
+          <li><i class="fas fa-check"></i> 1x Full Apartment Deep Clean</li>
+          <li><i class="fas fa-check"></i> 1x Bathroom Sanitization</li>
+          <li><i class="fas fa-check"></i> 1x Kitchen Deep Clean</li>
+          <li><i class="fas fa-check"></i> Free follow-up if pests return</li>
+        </ul>
+        <button class="btn-pkg" onclick="openBookingModal('Home Essentials Package')">Get This Package →</button>
+      </div>
+      <div class="package-card popular">
+        <div class="pkg-popular">⭐ MOST POPULAR</div>
+        <div class="pkg-header">
+          <h3>🏡 Villa Complete</h3>
+          <div class="pkg-price"><span>AED 1,299</span><small>/ package</small></div>
+          <p>Our best-value package for villas — everything covered for the whole year.</p>
+        </div>
+        <ul class="pkg-features">
+          <li><i class="fas fa-check"></i> 4x Pest Control visits/year</li>
+          <li><i class="fas fa-check"></i> 2x Villa Deep Cleaning</li>
+          <li><i class="fas fa-check"></i> 1x AC Duct Cleaning</li>
+          <li><i class="fas fa-check"></i> 1x Sofa &amp; Upholstery Clean</li>
+          <li><i class="fas fa-check"></i> 1x Kitchen + Bathroom Deep Clean</li>
+          <li><i class="fas fa-check"></i> Priority scheduling &amp; support</li>
+          <li><i class="fas fa-check"></i> Free emergency callout</li>
+        </ul>
+        <button class="btn-pkg" onclick="openBookingModal('Villa Complete Package')">Get This Package →</button>
+      </div>
+      <div class="package-card">
+        <div class="pkg-header">
+          <h3>🏢 Business Pro</h3>
+          <div class="pkg-price"><span>AED 2,499</span><small>/ year</small></div>
+          <p>Annual maintenance contract for offices, restaurants and commercial properties.</p>
+        </div>
+        <ul class="pkg-features">
+          <li><i class="fas fa-check"></i> Monthly pest control visits (12x)</li>
+          <li><i class="fas fa-check"></i> Quarterly deep cleaning (4x)</li>
+          <li><i class="fas fa-check"></i> Annual fumigation service</li>
+          <li><i class="fas fa-check"></i> AC duct &amp; filter cleaning</li>
+          <li><i class="fas fa-check"></i> Dedicated account manager</li>
+          <li><i class="fas fa-check"></i> Certificate of treatment</li>
+          <li><i class="fas fa-check"></i> 24/7 emergency support</li>
+        </ul>
+        <button class="btn-pkg" onclick="openBookingModal('Business Pro Package')">Get This Package →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-light" id="how">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">⚡ HOW IT WORKS</span>
+      <h2>Book in 4 Simple Steps</h2>
+      <p>Getting your home or office cleaned and pest-free has never been easier.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-icon">📱</div>
+        <h3>Choose Your Service</h3>
+        <p>Browse our services online or WhatsApp us. Tell us what you need and we'll recommend the best solution.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-icon">📅</div>
+        <h3>Pick Date &amp; Time</h3>
+        <p>Choose a time slot that suits you. We're available 7 days a week including weekends and public holidays.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-icon">🚗</div>
+        <h3>We Come to You</h3>
+        <p>Our certified technicians arrive on time with all equipment and eco-friendly products needed.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-icon">🏆</div>
+        <h3>Enjoy the Results</h3>
+        <p>Relax in your fresh, pest-free space. We follow up to ensure your 100% satisfaction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECHNICIANS / PROFESSIONALS SECTION (Urban Company Style) -->
+<section class="section" id="technicians">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">👨‍🔧 OUR PROFESSIONALS</span>
+      <h2>Meet Our Expert Technicians</h2>
+      <p>All technicians are background-checked, certified and trained to deliver 5-star service.</p>
+    </div>
+    <div class="tech-grid">
+      <div class="tech-card">
+        <div class="tech-avatar">👨‍🔧</div>
+        <div class="tech-info">
+          <h4>Ahmed Hassan</h4>
+          <p>Pest Control Specialist</p>
+          <div class="tech-rating">⭐ 4.9 · 312 jobs</div>
+          <div class="tech-badges"><span>MOE Certified</span><span>5yr Exp</span></div>
+        </div>
+        <button class="btn-tech" onclick="openBookingModal('Pest Control')">Book Ahmed</button>
+      </div>
+      <div class="tech-card">
+        <div class="tech-avatar">👩‍🔧</div>
+        <div class="tech-info">
+          <h4>Maria Santos</h4>
+          <p>Deep Cleaning Expert</p>
+          <div class="tech-rating">⭐ 4.8 · 487 jobs</div>
+          <div class="tech-badges"><span>ISO Trained</span><span>7yr Exp</span></div>
+        </div>
+        <button class="btn-tech" onclick="openBookingModal('Deep Cleaning')">Book Maria</button>
+      </div>
+      <div class="tech-card">
+        <div class="tech-avatar">👨‍🔬</div>
+        <div class="tech-info">
+          <h4>Rajesh Kumar</h4>
+          <p>Termite &amp; Fumigation</p>
+          <div class="tech-rating">⭐ 5.0 · 198 jobs</div>
+          <div class="tech-badges"><span>Fumigation Cert</span><span>8yr Exp</span></div>
+        </div>
+        <button class="btn-tech" onclick="openBookingModal('Fumigation')">Book Rajesh</button>
+      </div>
+      <div class="tech-card">
+        <div class="tech-avatar">👨‍💼</div>
+        <div class="tech-info">
+          <h4>Karim Al Mansouri</h4>
+          <p>AC Duct Specialist</p>
+          <div class="tech-rating">⭐ 4.9 · 256 jobs</div>
+          <div class="tech-badges"><span>HVAC Cert</span><span>6yr Exp</span></div>
+        </div>
+        <button class="btn-tech" onclick="openBookingModal('AC Duct Cleaning')">Book Karim</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE TRACKING FEATURE (Urban Company Style) -->
+<section class="section section-green" id="tracking">
+  <div class="container">
+    <div class="tracking-layout">
+      <div class="tracking-content">
+        <span class="section-badge light">📍 LIVE TRACKING</span>
+        <h2>Track Your Technician in Real Time</h2>
+        <p>Know exactly when your technician is on their way. Get live GPS tracking, ETA updates and instant WhatsApp notifications — all from the EcoBreeze app.</p>
+        <ul class="tracking-features">
+          <li><i class="fas fa-map-marker-alt"></i> Real-time GPS tracking on map</li>
+          <li><i class="fas fa-bell"></i> Push &amp; WhatsApp arrival alerts</li>
+          <li><i class="fas fa-id-card"></i> View technician profile before arrival</li>
+          <li><i class="fas fa-star"></i> Rate &amp; review after each service</li>
+          <li><i class="fas fa-history"></i> Full service history &amp; invoices</li>
+        </ul>
+        <div class="app-buttons">
+          <a href="#" class="app-btn">
+            <i class="fab fa-apple"></i>
+            <div><small>Download on the</small><strong>App Store</strong></div>
+          </a>
+          <a href="#" class="app-btn">
+            <i class="fab fa-google-play"></i>
+            <div><small>Get it on</small><strong>Google Play</strong></div>
+          </a>
+        </div>
+      </div>
+      <div class="tracking-visual">
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <div class="phone-map">
+              <div class="map-pin pulse">🚗</div>
+              <div class="map-dest">📍 Your Home</div>
+              <div class="eta-card">
+                <strong>Ahmed is on his way!</strong>
+                <p>ETA: 12 minutes</p>
+                <div class="eta-bar"><div class="eta-fill"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY / BEFORE-AFTER -->
+<section class="section section-light" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">📸 OUR WORK</span>
+      <h2>See the EcoBreeze Difference</h2>
+      <p>Real results from real homes and businesses across the UAE.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item large">
+        <div class="gallery-placeholder g1">
+          <span>🏡 Villa Deep Clean</span>
+          <small>Dubai Marina Villa · Before &amp; After</small>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder g2">
+          <span>🛋️ Sofa Restoration</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder g3">
+          <span>🐛 Pest-Free Kitchen</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder g4">
+          <span>❄️ AC Duct Clean</span>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder g5">
+          <span>🏢 Office Cleaning</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- REVIEWS SECTION -->
+<section class="section" id="reviews">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">💬 CUSTOMER REVIEWS</span>
+      <h2>What Our Clients Say</h2>
+      <p>Trusted by thousands of homeowners and businesses across the UAE.</p>
+    </div>
+    <div class="reviews-slider" id="reviewsSlider">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">A</div>
+          <div class="reviewer-info">
+            <h4>Ahmed Al Farsi</h4>
+            <p>📍 Dubai, UAE · Villa Package</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p class="review-text">"EcoBreeze completely transformed our villa! Their team was professional, punctual and thorough. Not a single pest sighting in 6 months since treatment. Absolutely worth every dirham!"</p>
+        <span class="review-verified">✅ Verified Customer</span>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">S</div>
+          <div class="reviewer-info">
+            <h4>Sarah Al Marzouqi</h4>
+            <p>📍 Abu Dhabi · Office Cleaning</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p class="review-text">"I was skeptical at first but EcoBreeze exceeded every expectation. The eco-friendly products mean I don't worry about my kids and pets. Our office has never been so clean. Highly recommended!"</p>
+        <span class="review-verified">✅ Verified Customer</span>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">K</div>
+          <div class="reviewer-info">
+            <h4>Khalid Al Rashidi</h4>
+            <p>📍 Ras Al Khaimah · Termite Control</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p class="review-text">"We've tried 3 other pest control companies in RAK. None of them come close to EcoBreeze. Fast, professional, affordable and the results are amazing. Termite problem solved in one visit!"</p>
+        <span class="review-verified">✅ Verified Customer</span>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">F</div>
+          <div class="reviewer-info">
+            <h4>Fatima Al Zaabi</h4>
+            <p>📍 Sharjah · Annual Package</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p class="review-text">"Booked the annual villa package — best decision ever! Regular pest control, deep cleaning twice a year and they always show up on time. Our home stays spotless year-round. Worth every penny."</p>
+        <span class="review-verified">✅ Verified Customer</span>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">M</div>
+          <div class="reviewer-info">
+            <h4>Mohammed Al Shamsi</h4>
+            <p>📍 Dubai · Business Pro Plan</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p class="review-text">"As a restaurant owner, hygiene compliance is everything. EcoBreeze handles our monthly pest control and quarterly deep cleaning. We've passed every health inspection with flying colors."</p>
+        <span class="review-verified">✅ Verified Customer</span>
+      </div>
+      <div class="review-card">
+        <div class="review-header">
+          <div class="reviewer-avatar">P</div>
+          <div class="reviewer-info">
+            <h4>Priya Sharma</h4>
+            <p>📍 Dubai Marina · Move-Out Clean</p>
+          </div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <p class="review-text">"The move-out cleaning service was exceptional. Got my full deposit back from the landlord! The team was incredibly detailed, even cleaned areas I'd forgotten existed. Will definitely use again!"</p>
+        <span class="review-verified">✅ Verified Customer</span>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button onclick="slideReviews(-1)">←</button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button onclick="slideReviews(1)">→</button>
+    </div>
+    <div class="overall-rating">
+      <div class="rating-big">4.9</div>
+      <div class="rating-stars">★★★★★</div>
+      <p>Based on 1,200+ verified reviews on Google</p>
+      <a href="#" class="btn-review">Write a Review</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREAS -->
+<section class="section section-light" id="areas">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">📍 SERVICE AREAS</span>
+      <h2>We Serve All UAE Emirates</h2>
+      <p>From Dubai to Fujairah — EcoBreeze brings professional hygiene services to your doorstep across the entire UAE.</p>
+    </div>
+    <div class="areas-grid">
+      <div class="area-card" onclick="openBookingModal()">
+        <div class="area-icon">🏙️</div>
+        <h3>Dubai</h3>
+        <p>Downtown, Marina, JBR, Jumeirah, Deira, Bur Dubai, Mirdif &amp; all areas</p>
+        <span class="area-link">Book in Dubai →</span>
+      </div>
+      <div class="area-card" onclick="openBookingModal()">
+        <div class="area-icon">🕌</div>
+        <h3>Abu Dhabi</h3>
+        <p>Khalifa City, Al Reem Island, Yas Island, Al Reef, Saadiyat &amp; all areas</p>
+        <span class="area-link">Book in Abu Dhabi →</span>
+      </div>
+      <div class="area-card" onclick="openBookingModal()">
+        <div class="area-icon">🌆</div>
+        <h3>Sharjah</h3>
+        <p>Al Nahda, Al Majaz, Al Khan, University City, Muwailih &amp; more</p>
+        <span class="area-link">Book in Sharjah →</span>
+      </div>
+      <div class="area-card" onclick="openBookingModal()">
+        <div class="area-icon">🏘️</div>
+        <h3>Ajman</h3>
+        <p>Al Nuaimiya, Al Rashidiya, Al Jurf, Al Rawda &amp; surrounding areas</p>
+        <span class="area-link">Book in Ajman →</span>
+      </div>
+      <div class="area-card" onclick="openBookingModal()">
+        <div class="area-icon">🏔️</div>
+        <h3>Ras Al Khaimah</h3>
+        <p>Al Hamra, Al Nakheel, Al Qusaidat, Khuzam &amp; all RAK areas</p>
+        <span class="area-link">Book in RAK →</span>
+      </div>
+      <div class="area-card" onclick="openBookingModal()">
+        <div class="area-icon">🌊</div>
+        <h3>Fujairah &amp; UAQ</h3>
+        <p>Fujairah City, Dibba, Umm Al Quwain &amp; northern emirate areas</p>
+        <span class="area-link">Book Now →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge">❓ FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I book a service with EcoBreeze? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>You can book online through our website form, call us directly, or send a WhatsApp message. We confirm your booking within 30 minutes and send you a reminder before the appointment.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Are your pest control products safe for children and pets? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely! We use WHO-approved, non-toxic, biodegradable products that are completely safe for your family including young children and all pets. We also advise on the appropriate waiting period after treatment.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you offer same-day or emergency services? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes! We offer same-day booking subject to availability, and emergency pest control services for urgent infestations. Call us directly for fastest response on emergency cases.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          What's included in a deep cleaning service? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Our deep cleaning covers all rooms, bathrooms, kitchen (inside appliances, cabinets, countertops), windows from inside, fans, AC vents, and all hard-to-reach areas. We bring all equipment and eco-friendly products.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is there a warranty or guarantee on pest control? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes! All our pest control treatments come with a free re-treatment guarantee. If pests return within the warranty period (30-90 days depending on treatment), we come back at no extra cost.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you provide a treatment certificate for commercial properties? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes. We issue official treatment certificates for all commercial pest control services, which are accepted by Dubai Municipality, Abu Dhabi Food Control Authority and other UAE regulatory bodies.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How do I pay for services? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>We accept cash, credit/debit cards, Apple Pay, Google Pay, and bank transfers. Payment is made after the service is completed to your satisfaction.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I reschedule or cancel my booking? <span class="faq-arrow">▼</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes, you can reschedule or cancel up to 2 hours before your appointment at no charge. For cancellations within 2 hours, a small fee may apply. Contact us via WhatsApp or call for changes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="section section-dark" id="contact">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-badge">📞 CONTACT US</span>
+      <h2>Still Have Questions?</h2>
+      <p>Our friendly team is available 7 days a week to answer any questions and help you choose the right service.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card" onclick="window.location.href='tel:+97150XXXXXXX'">
+        <div class="contact-icon">📞</div>
+        <h3>CALL US</h3>
+        <p>+971 50 XXX XXXX</p>
+        <small>Sun–Sat: 8AM – 9PM</small>
+      </div>
+      <div class="contact-card" onclick="window.open('https://wa.me/97150XXXXXXX')">
+        <div class="contact-icon">💬</div>
+        <h3>WHATSAPP</h3>
+        <p>Chat with us instantly</p>
+        <small>Fastest response</small>
+      </div>
+      <div class="contact-card" onclick="window.location.href='mailto:info@ecobreeze.ae'">
+        <div class="contact-icon">📧</div>
+        <h3>EMAIL</h3>
+        <p>info@ecobreeze.ae</p>
+        <small>Reply within 2 hours</small>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">📍</div>
+        <h3>OFFICE</h3>
+        <p>Dubai, UAE</p>
+        <small>Trade License: XXXXXXXX</small>
+      </div>
+    </div>
+    <div class="contact-form-wrap">
+      <h3>Send Us a Message</h3>
+      <form class="contact-form" onsubmit="submitContact(event)">
+        <div class="form-row">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Email Address" required>
+        </div>
+        <div class="form-row">
+          <input type="tel" placeholder="Phone / WhatsApp" required>
+          <select required>
+            <option value="">Service Enquiry</option>
+            <option>Deep Cleaning</option>
+            <option>Pest Control</option>
+            <option>Annual Package</option>
+            <option>Commercial Contract</option>
+            <option>Emergency Service</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <textarea placeholder="Tell us about your needs..." rows="4"></textarea>
+        <button type="submit" class="btn-submit">Send Message 📨</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- APP DOWNLOAD SECTION -->
+<section class="section section-green" id="app">
+  <div class="container">
+    <div class="app-promo">
+      <div class="app-content">
+        <h2>Book Smarter with the EcoBreeze App</h2>
+        <p>Manage bookings, track technicians in real time, access exclusive app-only discounts, and get instant WhatsApp notifications — all from your smartphone.</p>
+        <div class="app-features">
+          <div class="app-feat"><i class="fas fa-map-marker-alt"></i><p>Real-Time Tracking<br><small>Track your technician live</small></p></div>
+          <div class="app-feat"><i class="fas fa-credit-card"></i><p>Easy Payments<br><small>Card, Apple Pay or cash</small></p></div>
+          <div class="app-feat"><i class="fas fa-star"></i><p>Rate &amp; Review<br><small>Share your experience</small></p></div>
+          <div class="app-feat"><i class="fas fa-bell"></i><p>Smart Reminders<br><small>Never miss a service</small></p></div>
+        </div>
+        <div class="app-buttons">
+          <a href="#" class="app-btn dark">
+            <i class="fab fa-apple"></i>
+            <div><small>Download on the</small><strong>App Store</strong></div>
+          </a>
+          <a href="#" class="app-btn dark">
+            <i class="fab fa-google-play"></i>
+            <div><small>Get it on</small><strong>Google Play</strong></div>
+          </a>
+        </div>
+      </div>
+      <div class="app-visual">
+        <div class="app-phone">
+          <div class="app-phone-screen">
+            <div class="app-home-screen">
+              <div class="app-logo">🌿 EcoBreeze</div>
+              <div class="app-greeting">Good morning! ☀️</div>
+              <div class="app-booking-list">
+                <div class="app-booking-item active">
+                  <span>🧹 Villa Cleaning</span>
+                  <span class="app-status">Today 10:00 AM</span>
+                </div>
+                <div class="app-booking-item">
+                  <span>🐛 Pest Control</span>
+                  <span class="app-status">Scheduled</span>
+                </div>
+              </div>
+              <div class="app-nav">
+                <span>🏠</span><span>📅</span><span>📍</span><span>👤</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">🌿</span>
+          <div>
+            <span class="logo-name">EcoBreeze</span>
+            <span class="logo-tagline">HYGIENE HEROES</span>
+          </div>
+        </div>
+        <p>UAE's most trusted eco-friendly pest control and deep cleaning company. Serving 5,000+ satisfied customers across all 7 emirates since 2019.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Pest Control</h4>
+        <ul>
+          <li><a href="#">General Pest Control</a></li>
+          <li><a href="#">Termite Control</a></li>
+          <li><a href="#">Fumigation Services</a></li>
+          <li><a href="#">Bed Bug Treatment</a></li>
+          <li><a href="#">Mosquito Control</a></li>
+          <li><a href="#">Cockroach Control</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Deep Cleaning</h4>
+        <ul>
+          <li><a href="#">Villa Deep Cleaning</a></li>
+          <li><a href="#">Apartment Cleaning</a></li>
+          <li><a href="#">Office Cleaning</a></li>
+          <li><a href="#">Kitchen Cleaning</a></li>
+          <li><a href="#">Bathroom Cleaning</a></li>
+          <li><a href="#">AC Duct Cleaning</a></li>
+          <li><a href="#">Sofa Cleaning</a></li>
+          <li><a href="#">Move-In/Out Clean</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About EcoBreeze</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Packages &amp; Plans</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog &amp; Tips</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Eco Breeze Pest Control &amp; Cleaning Services LLC. All Rights Reserved. | Trade License No: XXXXXXXX</p>
+      <div class="footer-info">
+        <span>📞 +971 50 XXX XXXX</span>
+        <span>📧 info@ecobreeze.ae</span>
+        <span>📍 Dubai, UAE</span>
+        <span>🕐 Sun–Sat: 8AM – 9PM</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING ACTION BUTTONS -->
+<div class="fab-container">
+  <a href="https://wa.me/97150XXXXXXX" class="fab fab-whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+    <span class="fab-label">WhatsApp</span>
+  </a>
+  <button class="fab fab-call" onclick="window.location.href='tel:+97150XXXXXXX'">
+    <i class="fas fa-phone"></i>
+    <span class="fab-label">Call Now</span>
+  </button>
+  <button class="fab fab-book" onclick="openBookingModal()">
+    <i class="fas fa-calendar-alt"></i>
+    <span class="fab-label">Book Now</span>
+  </button>
+</div>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeBookingModal()">✕</button>
+    <div class="modal-header">
+      <h2>📅 Book Your Service</h2>
+      <p>Fill in your details and we'll confirm within 30 minutes</p>
+    </div>
+    <form class="modal-form" onsubmit="submitModalBooking(event)">
+      <div class="form-group">
+        <label>Select Service *</label>
+        <select id="modalService" required>
+          <option value="">Choose a service...</option>
+          <optgroup label="Deep Cleaning">
+            <option>Villa Deep Cleaning - AED 299+</option>
+            <option>Apartment Cleaning - AED 199+</option>
+            <option>Office Cleaning - AED 249+</option>
+            <option>Kitchen Deep Clean - AED 149+</option>
+            <option>Bathroom Deep Clean - AED 99+</option>
+            <option>AC Duct Cleaning - AED 349+</option>
+            <option>Sofa Cleaning - AED 179+</option>
+            <option>Move-In/Out Clean - AED 399+</option>
+            <option>Steam Cleaning - AED 199+</option>
+          </optgroup>
+          <optgroup label="Pest Control">
+            <option>General Pest Control - AED 199+</option>
+            <option>Termite Control - AED 499+</option>
+            <option>Fumigation - AED 349+</option>
+            <option>Bed Bug Treatment - AED 299+</option>
+            <option>Mosquito Control - AED 249+</option>
+            <option>Cockroach Control - AED 149+</option>
+          </optgroup>
+          <optgroup label="Packages">
+            <option>Home Essentials - AED 599</option>
+            <option>Villa Complete - AED 1,299</option>
+            <option>Business Pro - AED 2,499/yr</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" placeholder="Your full name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone (WhatsApp) *</label>
+          <input type="tel" placeholder="+971 XX XXX XXXX" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Emirate *</label>
+          <select required>
+            <option value="">Select Emirate</option>
+            <option>Dubai</option><option>Abu Dhabi</option>
+            <option>Sharjah</option><option>Ajman</option>
+            <option>Ras Al Khaimah</option><option>Fujairah</option>
+            <option>Umm Al Quwain</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Property Type</label>
+          <select>
+            <option>Apartment</option><option>Villa</option>
+            <option>Office</option><option>Commercial</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Preferred Date *</label>
+          <input type="date" required>
+        </div>
+        <div class="form-group">
+          <label>Preferred Time</label>
+          <select>
+            <option>Morning (8AM–12PM)</option>
+            <option>Afternoon (12PM–4PM)</option>
+            <option>Evening (4PM–9PM)</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea placeholder="Tell us more about your needs, property size, etc." rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn-submit-modal">✅ Confirm Booking Request</button>
+    </form>
+  </div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal modal-sm">
+    <button class="modal-close" onclick="closeLoginModal()">✕</button>
+    <div class="modal-header">
+      <h2>👤 Login / Sign Up</h2>
+      <p>Access your bookings and account</p>
+    </div>
+    <div class="login-tabs">
+      <button class="login-tab active" onclick="switchTab('login',this)">Login</button>
+      <button class="login-tab" onclick="switchTab('signup',this)">Sign Up</button>
+    </div>
+    <form class="modal-form" id="loginForm" onsubmit="submitLogin(event)">
+      <div class="form-group">
+        <label>Phone / Email</label>
+        <input type="text" placeholder="Enter phone or email" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" required>
+      </div>
+      <button type="submit" class="btn-submit-modal">Login</button>
+      <p class="form-alt"><a href="#">Forgot Password?</a></p>
+    </form>
+    <form class="modal-form hidden" id="signupForm" onsubmit="submitSignup(event)">
+      <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" placeholder="Your full name" required>
+      </div>
+      <div class="form-group">
+        <label>Phone (WhatsApp)</label>
+        <input type="tel" placeholder="+971 XX XXX XXXX" required>
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" placeholder="Create password" required>
+      </div>
+      <button type="submit" class="btn-submit-modal">Create Account</button>
+    </form>
+  </div>
+</div>
+
+<!-- SUCCESS TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
